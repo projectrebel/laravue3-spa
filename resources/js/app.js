@@ -3,10 +3,12 @@ require('alpinejs');
 
 import { createApp } from "vue";
 import Home from "./components/Home.vue";
+import Dashboard from "./components/Dashboard.vue";
 
 const app = createApp({
   components: {
-    Home
+    Home,
+    Dashboard
   }
 });
 

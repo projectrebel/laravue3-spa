@@ -32,7 +32,8 @@
         "vue-loader": "^16.1.0"
     },
     "dependencies": {
-        "vue": "^3.0.5"
+        "vue": "^3.0.5",
+        "vue-router": "^4.0.4"
     },
     "jest": {
         "testRegex": "tests/components/.*.test.js$",

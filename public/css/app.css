@@ -31424,6 +31424,21 @@ select {
           animation: bounce 1s infinite;
 }
 
+.router-link-active, .router-link-exact-active {
+  --tw-bg-opacity: 1;
+  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+}
+
+.router-link-active:hover, .router-link-exact-active:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+}
+
+.router-link-active, .router-link-exact-active {
+  --tw-text-opacity: 1;
+  color: rgba(17, 24, 39, var(--tw-text-opacity));
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

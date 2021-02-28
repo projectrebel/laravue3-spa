@@ -18,7 +18,11 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('app');
+    return view('app', ['user' => auth()->user()]);
 })->middleware(['auth'])->name('dashboard');
+
+Route::get('/dashboard/{vue_capture?}', function () {
+    return view('app', ['user' => auth()->user()]);
+})->middleware(['auth'])->name('dashboard')->where('vue_capture', '[\/\w\.\-\ \&\=]*');
 
 require __DIR__.'/auth.php';

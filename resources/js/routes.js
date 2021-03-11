@@ -4,7 +4,7 @@ import Page2 from './components/Page2.vue';
 export default {
     routes: [
         {
-            path: '/dashboard/page-1',
+            path: '/app/page-1',
             component: Page1,
             name: 'page-1',
             meta: {
@@ -12,7 +12,7 @@ export default {
             },
         },
         {
-            path: '/dashboard/page-2',
+            path: '/app/page-2',
             component: Page2,
             name: 'page-2',
             meta: {

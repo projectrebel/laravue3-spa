@@ -18326,7 +18326,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  setup: function setup() {
+    var user = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)({});
+    (0,vue__WEBPACK_IMPORTED_MODULE_0__.onMounted)(function () {
+      axios.get('/api/user').then(function (response) {
+        user.value = response.data;
+      });
+    });
+    return {
+      user: user
+    };
+  }
+});
 
 /***/ }),
 
@@ -18413,8 +18427,8 @@ var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(
   "class": "flex-shrink-0 flex items-center px-4"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
   "class": "h-8 w-auto",
-  src: "https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg",
-  alt: "Workflow"
+  src: "/images/laravue3-logo.png",
+  alt: "logo"
 })], -1
 /* HOISTED */
 );
@@ -18477,8 +18491,8 @@ var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(
   "class": "flex items-center flex-shrink-0 px-4"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
   "class": "h-8 w-auto",
-  src: "https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg",
-  alt: "Workflow"
+  src: "/images/laravue3-logo.png",
+  alt: "logo"
 })], -1
 /* HOISTED */
 );
@@ -18697,11 +18711,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
-var _hoisted_1 = {
+
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", {
   "class": "text-2xl font-bold"
-};
+}, "Page 1", -1
+/* HOISTED */
+);
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("h1", _hoisted_1, "Page 1");
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("pre", null, "    " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.user) + "\r\n  ", 1
+  /* TEXT */
+  )], 64
+  /* STABLE_FRAGMENT */
+  );
 }
 
 /***/ }),
@@ -18816,14 +18838,14 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   routes: [{
-    path: '/dashboard/page-1',
+    path: '/app/page-1',
     component: _components_Page1_vue__WEBPACK_IMPORTED_MODULE_0__.default,
     name: 'page-1',
     meta: {
       title: 'Page 1'
     }
   }, {
-    path: '/dashboard/page-2',
+    path: '/app/page-2',
     component: _components_Page2_vue__WEBPACK_IMPORTED_MODULE_1__.default,
     name: 'page-2',
     meta: {

@@ -1,5 +1,5 @@
 <template>
-<div class="h-screen flex overflow-hidden bg-white">
+<div class="h-screen flex overflow-hidden bg-gray-50">
   <div v-show="showMenu" class="md:hidden">
     <div class="fixed inset-0 flex z-40">
       <div class="fixed inset-0">

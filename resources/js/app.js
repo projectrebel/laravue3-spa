@@ -10,16 +10,17 @@ const router = createRouter({
   routes: routes.routes,
 });
 
-import Home from "./components/Home.vue";
-import Dashboard from "./components/Dashboard.vue";
 import App from "./components/App.vue";
+import Dashboard from "./components/Dashboard.vue";
+import Home from "./components/Home.vue";
 
 const app = createApp({
   components: {
-    Home,
+    App,
     Dashboard,
-    App
+    Home,
   }
 });
+
 app.use(router);
 app.mount("#app");

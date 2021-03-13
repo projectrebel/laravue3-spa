@@ -8,7 +8,7 @@ class AppController extends Controller
 {
     public function index()
     {
-        return redirect('app/page-1');
+        return redirect('app/dashboard');
     }
 
     public function app()

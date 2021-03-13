@@ -1,22 +1,22 @@
-import Page1 from './components/Page1.vue';
-import Page2 from './components/Page2.vue';
+import Dashboard from './components/Dashboard.vue';
+import AnotherComponent from './components/AnotherComponent.vue';
 
 export default {
     routes: [
         {
-            path: '/app/page-1',
-            component: Page1,
-            name: 'page-1',
+            path: '/app/dashboard',
+            component: Dashboard,
+            name: 'dashboard',
             meta: {
-                title: 'Page 1'
+                title: 'Dashboard'
             },
         },
         {
-            path: '/app/page-2',
-            component: Page2,
-            name: 'page-2',
+            path: '/app/another-component',
+            component: AnotherComponent,
+            name: 'another-component',
             meta: {
-                title: 'Page 2'
+                title: 'Another Component'
             },
         },
     ],

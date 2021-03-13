@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AppController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/app', [AppController::class, 'index'])->name('app');
+Route::get('/app/{vue_capture?}', [AppController::class, 'app'])->where('vue_capture', '[\/\w\.\-\ \&\=]*');
 
 require __DIR__.'/auth.php';

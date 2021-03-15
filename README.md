@@ -5,7 +5,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p> -->
 
-![image](public/images/laravue3-breeze-logo.png)
+![image](public/images/laravue3-spa-logo.png)
 
 ## A project template featuring Laravel, Vue 3, and TailwindCSS
 

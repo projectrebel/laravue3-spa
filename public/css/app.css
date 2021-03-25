@@ -31447,6 +31447,53 @@ select {
   color: rgba(17, 24, 39, var(--tw-text-opacity));
 }
 
+/*
+* ----------------------------
+* Transitions
+* ---------------------------
+*/
+
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-to, .fade-leave-from {
+  opacity: 1;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.slide-from-left-leave-active, .slide-from-left-enter-active {
+  transition-duration: 300ms;
+}
+
+.slide-from-left-enter-from, .slide-from-left-leave-to {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-translate-x: -100%;
+}
+
+.slide-from-left-enter-to, .slide-from-left-leave-from {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-translate-x: 0px;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -184481,3 +184528,4 @@ select {
             animation: bounce 1s infinite;
   }
 }
+

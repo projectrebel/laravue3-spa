@@ -9,8 +9,8 @@ export const store = new createStore({
   },
 
   mutations: {
-    setShowMobileMenu(state, user) {
-      state.user = user;
+    setShowMoblieMenu(state, showMobileMenu) {
+      state.showMobileMenu = showMobileMenu;
     },
     setUser(state, user) {
       state.user = user;

@@ -6,3 +6,38 @@
 .router-link-exact-active {
     @apply bg-gray-100 hover:bg-gray-100 text-gray-900;
 }
+
+
+/*
+* ----------------------------
+* Transitions
+* ---------------------------
+*/
+
+.fade-enter-from,
+.fade-leave-to {
+    @apply opacity-0;
+}
+.fade-enter-to,
+.fade-leave-from {
+    @apply opacity-100;
+}
+.fade-enter-active,
+.fade-leave-active {
+    @apply ease-in-out duration-300;
+}
+
+.slide-from-left-leave-active,
+.slide-from-left-enter-active {
+    @apply duration-300;
+}
+
+.slide-from-left-enter-from,
+.slide-from-left-leave-to {
+    @apply transform -translate-x-full;
+}
+
+.slide-from-left-enter-to,
+.slide-from-left-leave-from {
+    @apply transform translate-x-0;
+}

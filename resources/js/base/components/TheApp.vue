@@ -31,7 +31,6 @@
       >
         <div class="py-6">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-            {{ showMobileMenu }}
             <router-view></router-view>
           </div>
         </div>
@@ -67,7 +66,7 @@ export default {
     })
 
     function setShowMobileMenu(value) {
-      if (typeof variable !== "boolean"){
+      if (typeof value !== "boolean"){
         console.log('Value must be a boolean');
         return;
       }

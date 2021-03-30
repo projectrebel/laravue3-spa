@@ -1,3 +1,5 @@
+/*! tailwindcss v2.0.3 | MIT License | https://tailwindcss.com */
+
 /*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
 /*
@@ -440,15 +442,18 @@ textarea {
 }
 
 input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
   color: #9ca3af;
 }
 
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  opacity: 1;
   color: #9ca3af;
 }
 
 input::placeholder,
 textarea::placeholder {
+  opacity: 1;
   color: #9ca3af;
 }
 
@@ -10979,6 +10984,10 @@ select {
   cursor: move;
 }
 
+.cursor-help {
+  cursor: help;
+}
+
 .cursor-not-allowed {
   cursor: not-allowed;
 }
@@ -18711,7 +18720,6 @@ select {
 }
 
 .sticky {
-  position: -webkit-sticky;
   position: sticky;
 }
 
@@ -31439,6 +31447,53 @@ select {
   color: rgba(17, 24, 39, var(--tw-text-opacity));
 }
 
+/*
+* ----------------------------
+* Transitions
+* ---------------------------
+*/
+
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-to, .fade-leave-from {
+  opacity: 1;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.slide-from-left-leave-active, .slide-from-left-enter-active {
+  transition-duration: 300ms;
+}
+
+.slide-from-left-enter-from, .slide-from-left-leave-to {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-translate-x: -100%;
+}
+
+.slide-from-left-enter-to, .slide-from-left-leave-from {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-translate-x: 0px;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -41676,6 +41731,10 @@ select {
     cursor: move;
   }
 
+  .sm\:cursor-help {
+    cursor: help;
+  }
+
   .sm\:cursor-not-allowed {
     cursor: not-allowed;
   }
@@ -49408,7 +49467,6 @@ select {
   }
 
   .sm\:sticky {
-    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -72280,6 +72338,10 @@ select {
     cursor: move;
   }
 
+  .md\:cursor-help {
+    cursor: help;
+  }
+
   .md\:cursor-not-allowed {
     cursor: not-allowed;
   }
@@ -80012,7 +80074,6 @@ select {
   }
 
   .md\:sticky {
-    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -102884,6 +102945,10 @@ select {
     cursor: move;
   }
 
+  .lg\:cursor-help {
+    cursor: help;
+  }
+
   .lg\:cursor-not-allowed {
     cursor: not-allowed;
   }
@@ -110616,7 +110681,6 @@ select {
   }
 
   .lg\:sticky {
-    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -133488,6 +133552,10 @@ select {
     cursor: move;
   }
 
+  .xl\:cursor-help {
+    cursor: help;
+  }
+
   .xl\:cursor-not-allowed {
     cursor: not-allowed;
   }
@@ -141220,7 +141288,6 @@ select {
   }
 
   .xl\:sticky {
-    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -164092,6 +164159,10 @@ select {
     cursor: move;
   }
 
+  .\32xl\:cursor-help {
+    cursor: help;
+  }
+
   .\32xl\:cursor-not-allowed {
     cursor: not-allowed;
   }
@@ -171824,7 +171895,6 @@ select {
   }
 
   .\32xl\:sticky {
-    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -184458,3 +184528,4 @@ select {
             animation: bounce 1s infinite;
   }
 }
+

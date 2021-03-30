@@ -15,7 +15,7 @@
     </head>
     <body>
         <div id="app">
-            <app :user="{{ $user }}" />
+            <the-app :user="{{ $user }}" />
         </div>
     </body>
 </html>
